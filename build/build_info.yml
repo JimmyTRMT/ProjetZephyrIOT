@@ -1,0 +1,54 @@
+cmake:
+  application:
+    configuration-dir: '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app'
+    source-dir: '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - '/home/seatech/Documents/ProjetIOT/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/dts/bindings'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/bindings'
+    files:
+     - '/home/seatech/Documents/ProjetIOT/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app/boards/esp32_devkitc_procpu.overlay'
+    include-dirs:
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/include'
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/dts'
+     - '/home/seatech/Documents/ProjetIOT/modules/hal/stm32/dts'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/include'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/include/zephyr'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/common'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/vendor'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/rx'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/x86'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/xtensa'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/sparc'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/riscv'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/posix'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/arm64'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/arm'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts/arc'
+     - '/home/seatech/Documents/ProjetIOT/zephyr/dts'
+    user-files:
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app/boards/esp32_devkitc_procpu.overlay'
+  kconfig:
+    files:
+     - '/home/seatech/Documents/ProjetIOT/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app/prj.conf'
+    user-files:
+     - '/home/seatech/Documents/ProjetIOT/sniot_zephyr_template/app/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/seatech/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.0-rc1'
+    zephyr-base: '/home/seatech/Documents/ProjetIOT/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/seatech/zephyproject/.venv/bin/west build -b esp32_devkitc/esp32/procpu sniot_zephyr_template/app'
+  topdir: '/home/seatech/Documents/ProjetIOT'
+  version: '1.2.0'

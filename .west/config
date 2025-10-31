@@ -1,0 +1,7 @@
+[manifest]
+path = sniot_zephyr_template
+file = west.yml
+
+[zephyr]
+base = zephyr
+

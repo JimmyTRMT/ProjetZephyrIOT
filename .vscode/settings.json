@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "app_version.h": "c",
+        "max30102.h": "c"
+    }
+}
